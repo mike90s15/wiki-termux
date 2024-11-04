@@ -239,6 +239,20 @@ function _install_menu() {
         install_tool "$tool"
       done
       ;;
+    01) install_tool "tor" ;;
+    02) install_tool "openssh" ;;
+    03) install_tool "git" ;;
+    04) install_tool "python" ;;
+    05) install_tool "curl" ;;
+    06) install_tool "wget" ;;
+    07) install_tool "nano" ;;
+    08) install_tool "vim" ;;
+    09)
+      tools=("tor" "openssh" "git" "python" "curl" "wget" "nano" "vim")
+      for tool in "${tools[@]}"; do
+        install_tool "$tool"
+      done
+      ;;
     99)
       echo "Saindo..."
       break
