@@ -201,7 +201,7 @@ function _install_menu() {
     "/ >>>\e[1;36m ")
 
   echo "Atualizando pacotes..."
-  pkg update -y && pkg upgrade -y
+  pkg update -y &>/dev/null && pkg upgrade -y &>/dev/null
 
   while true; do
     clear
@@ -220,7 +220,7 @@ function _install_menu() {
         echo "$1 já está instalado."
       else
         echo "Instalando $1..."
-        pkg install -y $1
+        pkg install -y $1 &>/dev/null
       fi
     }
 
